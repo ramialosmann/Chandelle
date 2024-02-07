@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "Name": "Glowing Ember"
+  },
+  {
+    "Id": 2,
+    "Name": "Radiant Aroma"
+  },
+  {
+    "Id": 3,
+    "Name": "Twilight Glow"
+  },
+  {
+    "Id": 4,
+    "Name": "Moonlit Magic"
+  },
+  {
+    "Id": 5,
+    "Name": "Sunset Scents"
+  },
+  {
+    "Id": 6,
+    "Name": "Starlight Scent"
+  },
+  {
+    "Id": 7,
+    "Name": "Flickering Flame"
+  },
+  {
+    "Id": 8,
+    "Name": "Dusk Delight"
+  },
+  {
+    "Id": 9,
+    "Name": "Evening Essence"
+  },
+  {
+    "Id": 10,
+    "Name": "Mystic Mood"
+  }
+]

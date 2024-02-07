@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 11,
+    "Name": "Scented Candles"
+  },
+  {
+    "Id": 1,
+    "Name": "Decorative Candles"
+  },
+  {
+    "Id": 2,
+    "Name": "Jar Candles"
+  },
+  {
+    "Id": 3,
+    "Name": "Tealight Candles"
+  },
+  {
+    "Id": 4,
+    "Name": "On-Water Candles"
+  },
+  {
+    "Id": 5,
+    "Name": "Pillar Candles"
+  },
+  {
+    "Id": 6,
+    "Name": "Floating Candles"
+  },
+  {
+    "Id": 7,
+    "Name": "Beeswax Candles"
+  },
+  {
+    "Id": 8,
+    "Name": "Aromatherapy Candles"
+  }
+]

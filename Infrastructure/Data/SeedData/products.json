@@ -1,0 +1,163 @@
+[
+  {
+    "Name": "Ember Glow Scented Candle",
+    "Description": "Experience the warmth and fragrance of ember glow with this scented candle.",
+    "Price": 15,
+    "PictureUrl": "images/products/candle-ember-glow.png",
+    "ProductTypeId": 11,
+    "ProductBrandId": 1
+  },
+  {
+    "Name": "Radiant Rose Decorative Candle",
+    "Description": "Illuminate your space with the radiant glow of this decorative rose candle.",
+    "Price": 20,
+    "PictureUrl": "images/products/candle-radiant-rose.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 2
+  },
+  {
+    "Name": "Twilight Jar Candle",
+    "Description": "Capture the essence of twilight with this beautifully crafted jar candle.",
+    "Price": 18,
+    "PictureUrl": "images/products/candle-twilight-jar.png",
+    "ProductTypeId": 2,
+    "ProductBrandId": 3
+  },
+  {
+    "Name": "Moonlit Tealight Candle Set",
+    "Description": "Create a magical ambiance with this set of moonlit tealight candles.",
+    "Price": 25,
+    "PictureUrl": "images/products/candle-moonlit-tealight-set.png",
+    "ProductTypeId": 3,
+    "ProductBrandId": 4
+  },
+  {
+    "Name": "Sunset Serenity On-Water Candle",
+    "Description": "Add a touch of serenity to your evenings with this sunset on-water candle.",
+    "Price": 22,
+    "PictureUrl": "images/products/candle-sunset-serenity.png",
+    "ProductTypeId": 4,
+    "ProductBrandId": 5
+  },
+  {
+    "Name": "Starlight Pillar Candle",
+    "Description": "Let the starlight guide your way with this elegant pillar candle.",
+    "Price": 30,
+    "PictureUrl": "images/products/candle-starlight-pillar.png",
+    "ProductTypeId": 5,
+    "ProductBrandId": 6
+  },
+  {
+    "Name": "Flickering Flame Floating Candle",
+    "Description": "Create a mesmerizing atmosphere with the flickering flame of this floating candle.",
+    "Price": 12,
+    "PictureUrl": "images/products/candle-flickering-flame.png",
+    "ProductTypeId": 6,
+    "ProductBrandId": 7
+  },
+  {
+    "Name": "Dusk Delight Beeswax Candle",
+    "Description": "Experience pure delight with the soothing scent of dusk in this beeswax candle.",
+    "Price": 28,
+    "PictureUrl": "images/products/candle-dusk-delight.png",
+    "ProductTypeId": 7,
+    "ProductBrandId": 8
+  },
+  {
+    "Name": "Evening Essence Aromatherapy Candle",
+    "Description": "Unwind and relax with the essence of evening in this aromatherapy candle.",
+    "Price": 35,
+    "PictureUrl": "images/products/candle-evening-essence.png",
+    "ProductTypeId": 8,
+    "ProductBrandId": 9
+  },
+  {
+    "Name": "Mystic Moonlight Scented Candle",
+    "Description": "Embark on a mystical journey with the scent of moonlight in this candle.",
+    "Price": 16,
+    "PictureUrl": "images/products/candle-mystic-moonlight.png",
+    "ProductTypeId": 11,
+    "ProductBrandId": 10
+  },
+    {
+      "Name": "Glowing Embers Decorative Candle",
+      "Description": "Illuminate your space with the warm glow of glowing embers in this decorative candle.",
+      "Price": 18,
+      "PictureUrl": "images/products/candle-glowing-embers.png",
+      "ProductTypeId": 1,
+      "ProductBrandId": 1
+    },
+    {
+      "Name": "Radiant Aroma Jar Candle",
+      "Description": "Fill your room with the delightful aroma of radiant aroma in this jar candle.",
+      "Price": 22,
+      "PictureUrl": "images/products/candle-radiant-aroma.png",
+      "ProductTypeId": 2,
+      "ProductBrandId": 2
+    },
+    {
+      "Name": "Twilight Glow Tealight Candle Set",
+      "Description": "Add a touch of twilight glow to your evenings with this set of tealight candles.",
+      "Price": 24,
+      "PictureUrl": "images/products/candle-twilight-glow-tealight-set.png",
+      "ProductTypeId": 3,
+      "ProductBrandId": 3
+    },
+    {
+      "Name": "Moonlit Magic On-Water Candle",
+      "Description": "Experience the magic of moonlit nights with this enchanting on-water candle.",
+      "Price": 28,
+      "PictureUrl": "images/products/candle-moonlit-magic.png",
+      "ProductTypeId": 4,
+      "ProductBrandId": 4
+    },
+    {
+      "Name": "Sunset Scents Pillar Candle",
+      "Description": "Infuse your space with the captivating scents of sunset in this pillar candle.",
+      "Price": 32,
+      "PictureUrl": "images/products/candle-sunset-scents.png",
+      "ProductTypeId": 5,
+      "ProductBrandId": 5
+    },
+    {
+      "Name": "Starlight Serenity Floating Candle",
+      "Description": "Find serenity under the starlight with this serene floating candle.",
+      "Price": 14,
+      "PictureUrl": "images/products/candle-starlight-serenity.png",
+      "ProductTypeId": 6,
+      "ProductBrandId": 6
+    },
+    {
+      "Name": "Flickering Flame Beeswax Candle",
+      "Description": "Enjoy the gentle flicker of a flame with this soothing beeswax candle.",
+      "Price": 26,
+      "PictureUrl": "images/products/candle-flickering-flame-beeswax.png",
+      "ProductTypeId": 7,
+      "ProductBrandId": 7
+    },
+    {
+      "Name": "Dusk Delight Aromatherapy Candle Set",
+      "Description": "Delight your senses with the calming aromatherapy of dusk in this candle set.",
+      "Price": 38,
+      "PictureUrl": "images/products/candle-dusk-delight-aromatherapy-set.png",
+      "ProductTypeId": 8,
+      "ProductBrandId": 8
+    },
+    {
+      "Name": "Evening Essence Scented Candle",
+      "Description": "Experience the essence of evening with this captivating scented candle.",
+      "Price": 20,
+      "PictureUrl": "images/products/candle-evening-essence.png",
+      "ProductTypeId": 11,
+      "ProductBrandId": 9
+    },
+    {
+      "Name": "Mystic Mood Decorative Pillar Candle",
+      "Description": "Set the mood with the mystical ambiance of this decorative pillar candle.",
+      "Price": 30,
+      "PictureUrl": "images/products/candle-mystic-mood-pillar.png",
+      "ProductTypeId": 1,
+      "ProductBrandId": 10
+    }
+
+]
