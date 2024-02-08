@@ -1,0 +1,26 @@
+<div class="card border-primary mb-3 text-center" style="max-width: 22rem; height:500px;  " *ngIf="product">
+    <div class="card-header" style="max-height: 55px; overflow:scroll ; text-indent: 0;"> <h4 class="scrolling-text" style="width: max-content ;">{{product.name}}</h4></div>
+    <div class="card-body">
+        <div class="card-image-wrapper" >
+            <div class="overlay">
+                <a ><strong> <i class="bi bi-search"></i> Quick view </strong></a>
+              </div>
+            <img src="{{product.pictureUrl}}" alt="product" class="form-control bg-transparent" 
+                (click)="(quickviewModal(QucikViewTemplate))">
+            <ng-template #QucikViewTemplate >
+               <app-quick-view [product]="product" (close)="closequickview($event)"  ></app-quick-view>
+            </ng-template>
+
+        </div>
+    </div>
+
+    <div class="card-body">
+        <h2>{{product.price}} $</h2>
+    </div>
+    <div class="card-body">
+      <div class="d-flex mb-2">
+        <button class="btn btn-primary me-2 btn-sm">Add To Cart</button>           
+        <button class="btn btn-outline-secondary btn-sm">View Product</button>
+    </div>
+    </div>
+

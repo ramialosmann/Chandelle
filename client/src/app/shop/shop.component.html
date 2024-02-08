@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="row">
+        <section class="col-3">
+            <h5 class="text-dark mt-4">Sort</h5>
+            <select  class="form-select mb-4">
+                <option class="form-control mb-2" selected >Alphabetical</option>
+                <option class="form-control mb-2" >Price : Low to high</option>
+                <option class="form-control" >Price : High to low</option>
+            </select>
+            <h5 class="text-dark mt-3">Brands</h5>
+            <div class="list-group">
+                <a *ngFor="let brand of brands" class="list-group-item list-group-item-action" >{{brand.name}}</a>
+              </div>
+            <h5 class="text-dark mt-3">Types</h5>
+            <div class="list-group">
+                <a *ngFor="let type of types" class="list-group-item list-group-item-action" >{{type.name}}</a>
+            </div>
+        </section>
+        <section class="col-9">
+            <div class="d-flex justify-content-between pb-2 mb-3 align-items-center">
+                <span>Showing <strong>{{products.length}}</strong> out of <strong>{{count}}</strong> results</span>
+                <form  class="d-flex">
+                    <input type="search" class="form-control me-2" placeholder="search product">
+                    <button class="btn btn-outline-primary me-2">Search</button>
+                    <button class="btn btn-outline-secondary">Reset</button>
+                </form>
+            </div>
+            <div class="row row-cols-3 g-3">
+                <app-shop-product-card *ngFor="let product of products" [product]="product"></app-shop-product-card>
+            </div>
+        </section>
+    </div>
+</div>

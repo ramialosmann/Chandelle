@@ -1,0 +1,18 @@
+<div class="container-fluid">
+<div class="row" *ngFor="let product of products , let i = index" style="margin-left: 120px;">
+    <div class="col-12 mt-3" *ngIf="i < 2">
+       
+        <img src="{{product.pictureUrl}}">
+        
+    </div>
+</div>
+<div class="row">
+    
+        <div class="col-6 mb-4 " *ngFor="let product of products, let i = index" >
+            <div  *ngIf="i > 3 && i < 10" class="container imgcont me-1">
+             <img src="{{product.pictureUrl}}" alt="">
+            </div>
+        </div>
+    
+</div>
+</div>
