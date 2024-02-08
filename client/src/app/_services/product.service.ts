@@ -1,10 +1,11 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { Pagination } from '../_models/Pagination';
 import { Product } from '../_models/Product';
 import { ProductBrand } from '../_models/ProductBrand';
 import { ProductType } from '../_models/ProductType';
+import { ShopQueryApiParams } from '../_models/ShopQueryApiParams';
 
 
 @Injectable({
@@ -16,20 +17,22 @@ export class ProductService {
 
   } 
 
-  GetProducts() {
-    return this.http.get<Pagination<Product[]>>(this.baseUrl + 'products?pageSize=50');
-  }
 
-  SortProducts(sortBy: string, brandId?: number, typeId?: number) {
-    let url = this.baseUrl + 'products?sort=' + sortBy;
-    if (brandId !== undefined) {
-        url += '&brandId=' + brandId;
+  GetProducts(queryParams : ShopQueryApiParams) {
+    let params = new HttpParams();
+    if(queryParams.BrandId > 0) {
+      params = params.append('brandId' , queryParams.BrandId);
     }
-    if (typeId !== undefined) {
-        url += '&typeId=' + typeId;
+    if(queryParams.TypeId > 0) {
+      params = params.append('typeId' , queryParams.TypeId);
     }
-    url += '&pageSize=50';
-    return this.http.get<Pagination<Product[]>>(url);
+      params = params.append('sort' , queryParams.SortBy);
+      params = params.append('pageSize' , queryParams.PageSize);
+      params = params.append('pageIndex' , queryParams.PageNumber);
+   
+
+
+    return this.http.get<Pagination<Product[]>>(this.baseUrl + 'products' , {params});
   }
 
 

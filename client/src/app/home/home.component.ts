@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../_services/product.service';
 import { Pagination } from '../_models/Pagination';
 import { Product } from '../_models/Product';
+import { ShopQueryApiParams } from '../_models/ShopQueryApiParams';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   products : Product[] = [];
   radioModel = 'Cheapest';
   modelGroupDisabled=false;
-
+  queryParams = new ShopQueryApiParams();
   constructor(private productService : ProductService ) {
 
   }
@@ -23,17 +24,10 @@ export class HomeComponent implements OnInit {
   }
   
   GetProducts() {
-    this.productService.GetProducts().subscribe({
+    this.productService.GetProducts(this.queryParams).subscribe({
       next : response => this.products = response.data
     })
   }
 
-  SortProducts(sortBy: string, brandId?: number, typeId?: number) {
-    this.productService.SortProducts(sortBy, brandId, typeId).subscribe({
-        next: response => {
-           this.products = response.data 
-          }
-    });
-}
 
 }

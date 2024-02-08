@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="card-image-wrapper" >
             <div class="overlay">
-                <a ><strong> <i class="bi bi-search"></i> Quick view </strong></a>
+                <a ><strong> <i class="bi bi-eye"></i> Quick view </strong></a>
               </div>
             <img src="{{product.pictureUrl}}" alt="product" class="form-control bg-transparent" 
                 (click)="(quickviewModal(QucikViewTemplate))">
@@ -19,8 +19,12 @@
     </div>
     <div class="card-body">
       <div class="d-flex mb-2">
-        <button class="btn btn-primary me-2 btn-sm">Add To Cart</button>           
-        <button class="btn btn-outline-secondary btn-sm">View Product</button>
+        <button class="btn btn-outline-primary me-2 btn-sm" 
+        style="width: 50%;" tooltip="add To cart" placement="left">
+        <i class="bi bi-cart" style="font-size: 20px;"></i></button>           
+        <button class="btn btn-outline-primary btn-sm" 
+        style="width: 50%;" tooltip="view Product" placement="right">
+        <i class="bi bi-arrows-angle-expand" style="font-size: 20px;"></i></button>
     </div>
     </div>
 

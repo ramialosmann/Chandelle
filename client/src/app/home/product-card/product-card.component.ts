@@ -1,12 +1,7 @@
-import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ToastrService } from 'ngx-toastr';
+import { Component, Input, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';;
 import { take } from 'rxjs';
-import { CartItem } from 'src/app/_models/CartItem';
 import { Product } from 'src/app/_models/Product';
-import { CartService } from 'src/app/_services/cart.service';
-
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
