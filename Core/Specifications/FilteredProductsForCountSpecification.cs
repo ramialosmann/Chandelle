@@ -8,6 +8,7 @@ namespace Core.Specifications
     {
         public FilteredProductsForCountSpecification(ProductSpecParameters parameters)
              : base(x =>
+             (string.IsNullOrEmpty(parameters.search)|| x.Name.ToLower().Contains(parameters.search))&&
              (!parameters.brandId.HasValue||x.ProductBrandId==parameters.brandId)&&
              (!parameters.typeId.HasValue||x.ProductTypeId==parameters.typeId))
         {
