@@ -83,9 +83,9 @@ export class ShopComponent implements OnInit {
     
   }
 
-  ChangePange(event : any) {
-    if(this.queryParams.PageNumber !== event.page) {
-      this.queryParams.PageNumber = event.page;
+  ChangePage(event : any) {
+    if(this.queryParams.PageNumber !== event) {
+      this.queryParams.PageNumber = event;
       this.GetProducts();
     }
   }

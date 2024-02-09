@@ -8,9 +8,14 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ToastrModule } from 'ngx-toastr';
+import { PaginationHeaderComponent } from './pagination-header/pagination-header.component';
+import { PageSwitcherComponent } from './page-switcher/page-switcher.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PaginationHeaderComponent,
+    PageSwitcherComponent
+  ],
   imports: [
     CommonModule,
     ToastrModule.forRoot(
@@ -32,7 +37,9 @@ import { ToastrModule } from 'ngx-toastr';
     ButtonsModule,
     PaginationModule,
     AccordionModule,
-    CollapseModule
+    CollapseModule,
+    PaginationHeaderComponent,
+    PageSwitcherComponent
   ]
 })
 export class SharedModule {

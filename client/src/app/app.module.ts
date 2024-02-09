@@ -16,7 +16,8 @@ import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { ShopComponent } from './shop/shop.component';
 import { ShopProductCardComponent } from './shop/shop-product-card/shop-product-card.component';
 import { RegisterComponent } from './register/register.component';
-import { SharedModule } from './_modules/shared.module';
+import { SharedModule } from './_modules/shared/shared.module';
+
 
 
 
