@@ -1,4 +1,6 @@
-<pagination  *ngIf="count  && PageSize"
+<div class="pagination-container">
+<pagination  *ngIf="count  && PageSize && count > 0 && PageSize > 0"
+class="bg-dark rounded "
 [boundaryLinks]="true" 
 [totalItems]="count"
 [itemsPerPage]="PageSize"
@@ -8,3 +10,4 @@ previousText="&lsaquo;" nextText="&rsaquo;"
 firstText="&laquo;" lastText="&raquo;">
 
 </pagination>
+</div>

@@ -1,11 +1,12 @@
-<div class="card border-primary mb-3 text-center" style="max-width: 22rem; height:500px;  " *ngIf="product">
-    <div class="card-header" style="max-height: 55px; overflow:scroll ; text-indent: 0;"> <h4 class="scrolling-text" style="width: max-content ;">{{product.name}}</h4></div>
+<div class="card  border-dark bg-secondary mb-3 text-center" style="max-width: 22rem; height:500px;  " *ngIf="product">
+    <div class="card-header" style="max-height: 65px ; overflow: hidden; text-indent: 0;">
+         <h4 class="scrolling-text" style="width: max-content ;">{{product.name}}</h4></div>
     <div class="card-body">
         <div class="card-image-wrapper" >
             <div class="overlay">
                 <a ><strong> <i class="bi bi-eye"></i> Quick view </strong></a>
               </div>
-            <img src="{{product.pictureUrl}}" alt="product" class="form-control bg-transparent" 
+            <img src="{{product.pictureUrl}}" alt="product" class=" bg-transparent" 
                 (click)="(quickviewModal(QucikViewTemplate))">
             <ng-template #QucikViewTemplate >
                <app-quick-view [product]="product" (close)="closequickview($event)"  ></app-quick-view>
@@ -15,15 +16,15 @@
     </div>
 
     <div class="card-body">
-        <h2>{{product.price}} $</h2>
+        <h2 class="text-black">{{product.price}} $</h2>
     </div>
     <div class="card-body">
-      <div class="d-flex mb-2">
-        <button class="btn btn-outline-primary me-2 btn-sm" 
-        style="width: 50%;" tooltip="add To cart" placement="left">
+      <div class="d-flex mb-2" style="margin-top: -50px;">
+        <button class="btn btn-outline-dark me-2 btn-sm" 
+        style="width: 50%;" tooltip="add To cart" placement="bottom">
         <i class="bi bi-cart" style="font-size: 20px;"></i></button>           
-        <button class="btn btn-outline-primary btn-sm" 
-        style="width: 50%;" tooltip="view Product" placement="right">
+        <button class="btn btn-outline-dark btn-sm" 
+        style="width: 50%;" tooltip="view Product" placement="bottom">
         <i class="bi bi-arrows-angle-expand" style="font-size: 20px;"></i></button>
     </div>
     </div>

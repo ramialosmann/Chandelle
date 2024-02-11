@@ -1,36 +1,37 @@
-<div class="container mt-5">
+<div class="container mt-5 " data-bs-theme="light">
     <div class="row">
-        <section class="col-3 mt-5">
+        <section class="col-3 mt-5 border border-dark border-2 rounded" style="height: fit-content;">
             
-            <h3 class="mt-5">Filters</h3>
-        <h5 class="text-dark mt-4 me-2 dropdown-toggle" (click)="isSortCollapsed = !isSortCollapsed">Sort </h5>  
+            <h3 class="mt-2 text-black">Filters</h3>
+        <h5 class="text-black mt-4 me-2 dropdown-toggle" (click)="isSortCollapsed = !isSortCollapsed">Sort </h5>  
 
             <select 
             [collapse]="isSortCollapsed" 
             [isAnimated]="true"  
-            class="form-select mb-4" 
+            class="form-select bg-dark mb-4" 
             (change)="SortBy($event)">
-                <option class="form-control mb-2" 
+                <option class="form-control mb-2 text-white" 
                 *ngFor="let sorttype of sortOptions" 
                 [value]="sorttype.value" >
                     {{sorttype.name}}
                 </option>
             </select>
             
-            <h5 class="text-dark mt-3 dropdown-toggle" (click)="isBrandsCollapsed = !isBrandsCollapsed" >Brands</h5>
-            <ul  class="list-group" [collapse]="isBrandsCollapsed" [isAnimated]="true">
+            <h5 class="text-black mt-3 dropdown-toggle" (click)="isBrandsCollapsed = !isBrandsCollapsed" >Brands</h5>
+            <ul  class="list-group " [collapse]="isBrandsCollapsed" [isAnimated]="true">
                 <li  *ngFor="let brand of brands" 
                    [class.active]="brand.id === queryParams.BrandId"
-                   class="list-group-item list-group-item-action"  (click)="SelectBrand(brand.id)" >{{brand.name}}</li>
+                   class="list-group-item list-group-item-action list-group-item-dark  text-black"  
+                   (click)="SelectBrand(brand.id)" >{{brand.name}}</li>
             </ul>
-            <h5 class="text-dark mt-3 dropdown-toggle" (click)="isTypesCollapsed = !isTypesCollapsed">Types</h5>
+            <h5 class="text-black mt-3 dropdown-toggle" (click)="isTypesCollapsed = !isTypesCollapsed">Types</h5>
             <ul class="list-group" [collapse]="isTypesCollapsed" [isAnimated]="true">
                 <li (click)="SelectType(type.id)" *ngFor="let type of types" 
                 [class.active]="type.id === queryParams.TypeId"
-                class="list-group-item list-group-item-action" >{{type.name}}</li>
+                class="list-group-item list-group-item-action list-group-item-dark text-black" >{{type.name}}</li>
             </ul>
             <div class="text-center mt-3">
-            <button class="btn-outline-danger btn btn-sm " (click)="ResetFilters()">Reset filters</button>
+            <button class="btn-outline-dark btn btn-sm mb-4 " (click)="ResetFilters()">Reset filters</button>
            </div>
         </section>
         <section  class="col-9" >
@@ -38,17 +39,17 @@
                 <app-pagination-header [count]="count" 
                  [PageNumber]="queryParams.PageNumber" [PageSize]="queryParams.PageSize" ></app-pagination-header>
                 <form  class="d-flex">
-                    <input type="search" class="form-control me-2" placeholder="search product">
-                    <button class="btn btn-outline-primary me-2"><i class="bi bi-search"></i></button>
-                    <button class="btn btn-outline-danger"><i class="bi bi-arrow-clockwise"></i></button>
+                    <input type="search" class="form-control bg-dark me-2" placeholder="search product">
+                    <button class="btn btn-outline-dark me-2"><i class="bi bi-search"></i></button>
+                    <button class="btn btn-outline-dark"><i class="bi bi-arrow-clockwise"></i></button>
                 </form>
             </div>
             <div class="row row-cols-3 g-3">
                 <app-shop-product-card *ngFor="let product of products" [product]="product"></app-shop-product-card>
             </div>
-            <div class="text-warning mt-4" *ngIf="count === 0">
+            <div class="text-dark ms-5 mt-4" *ngIf="count === 0">
                 <h4 class="mt-5">No products were found</h4>
-                <button class="btn btn-outline-danger mt-3" 
+                <button class="btn btn-outline-dark mt-3" 
                 (click)="ResetFilters() ">Reset Filters </button>
             </div>
 
