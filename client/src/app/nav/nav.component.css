@@ -6,18 +6,8 @@
     cursor: not-allowed;
   }
   
-.navbar-brand img {
-    opacity: 0.5;
-    width: 20%;
-    margin-top: -10px;
-    
-    transition-duration: 1.2s;
-}
-.navbar-brand:hover img {
-    opacity: 1.3;
-    transition-duration: 1.2s;
-}
 
 .navbar {
-    height: 75px;
+    height: 35px;
+    overflow: visible;
 }

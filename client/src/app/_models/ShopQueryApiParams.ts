@@ -4,5 +4,6 @@ export class ShopQueryApiParams {
     SortBy = "name";
     PageSize = 6;
     PageNumber = 1;
+    search = '';
 
 }

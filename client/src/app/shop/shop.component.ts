@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../_services/product.service';
 import { Product } from '../_models/Product';
 import { ProductBrand } from '../_models/ProductBrand';
 import { ProductType } from '../_models/ProductType';
 import { ShopQueryApiParams } from '../_models/ShopQueryApiParams';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-shop',
@@ -88,6 +89,15 @@ export class ShopComponent implements OnInit {
       this.queryParams.PageNumber = event;
       this.GetProducts();
     }
+  }
+
+  SearchProduct() {
+    this.queryParams.search = this.queryParams.search ;
+    this.GetProducts();
+  }
+  ResetSearch() {
+    this.queryParams.search = '';
+    this.GetProducts();
   }
 
 }

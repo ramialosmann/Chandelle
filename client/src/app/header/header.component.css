@@ -1,0 +1,12 @@
+.navbar-brand img {
+    opacity: 0.5;
+    width: 25%;
+    margin-top: -10px;
+    margin-left: 427px;
+    transition-duration: 1.2s;
+}
+.navbar-brand:hover img {
+    opacity: 1.3;
+    transition-duration: 1.2s;
+}
+

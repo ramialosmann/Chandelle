@@ -29,6 +29,9 @@ export class ProductService {
       params = params.append('sort' , queryParams.SortBy);
       params = params.append('pageSize' , queryParams.PageSize);
       params = params.append('pageIndex' , queryParams.PageNumber);
+      if(queryParams.search.length > 1) {
+      params = params.append('search' , queryParams.search);
+      }
    
 
 

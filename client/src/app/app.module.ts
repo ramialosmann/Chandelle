@@ -17,6 +17,7 @@ import { ShopComponent } from './shop/shop.component';
 import { ShopProductCardComponent } from './shop/shop-product-card/shop-product-card.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from './_modules/shared/shared.module';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -31,6 +32,7 @@ import { SharedModule } from './_modules/shared/shared.module';
     ShopComponent,
     ShopProductCardComponent,
     RegisterComponent,
+    HeaderComponent,
 
   ],
   imports: [
