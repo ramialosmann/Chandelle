@@ -28,6 +28,11 @@ export class ShopComponent implements OnInit {
   types : ProductType[] = [];
   count = 0;
 
+  // typeahead
+    names : string[] = [];
+
+
+
   // filtering related object
 
    queryParams = new ShopQueryApiParams();
@@ -59,6 +64,7 @@ export class ShopComponent implements OnInit {
         this.count = response.count;
         this.queryParams.PageNumber = response.pageIndex;
         this.queryParams.PageSize = response.pageSize;
+        this.GetNames()
       } 
     })
   }
@@ -98,6 +104,12 @@ export class ShopComponent implements OnInit {
   ResetSearch() {
     this.queryParams.search = '';
     this.GetProducts();
+  }
+
+  GetNames() {
+    for(let product of this.products) {
+        this.names.push(product.name);
+    }
   }
 
 }

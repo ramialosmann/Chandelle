@@ -18,17 +18,17 @@
             </select>
             
             <h5 class="text-black mt-3 dropdown-toggle" (click)="isBrandsCollapsed = !isBrandsCollapsed" >Brands</h5>
-            <ul  class="list-group " [collapse]="isBrandsCollapsed" [isAnimated]="true">
+            <ul  class="list-group list-group-secondary " [collapse]="isBrandsCollapsed" [isAnimated]="true">
                 <li  *ngFor="let brand of brands" 
                    [class.active]="brand.id === queryParams.BrandId"
-                   class="list-group-item list-group-item-action list-group-item-dark  text-black"  
+                   class="list-group-item list-group-item-action   text-black"  
                    (click)="SelectBrand(brand.id)" >{{brand.name}}</li>
             </ul>
             <h5 class="text-black mt-3 dropdown-toggle" (click)="isTypesCollapsed = !isTypesCollapsed">Types</h5>
-            <ul class="list-group" [collapse]="isTypesCollapsed" [isAnimated]="true">
+            <ul class="list-group list-group-secondary" [collapse]="isTypesCollapsed" [isAnimated]="true">
                 <li (click)="SelectType(type.id)" *ngFor="let type of types" 
                 [class.active]="type.id === queryParams.TypeId"
-                class="list-group-item list-group-item-action list-group-item-dark text-black" >{{type.name}}</li>
+                class="list-group-item list-group-item-action text-black" >{{type.name}}</li>
             </ul>
             <div class="text-center mt-3">
             <button class="btn-outline-dark btn btn-sm mb-4 " (click)="ResetFilters()">Reset filters</button>
@@ -40,6 +40,7 @@
                  [PageNumber]="queryParams.PageNumber" [PageSize]="queryParams.PageSize" ></app-pagination-header>
                 <form #SearchForm="ngForm"   class="d-flex" (ngSubmit)="SearchProduct()">
                     <input 
+                    [typeahead]="names"
                     type="search"
                     name="search"
                     [(ngModel)]="queryParams.search" 
