@@ -14,7 +14,7 @@ export class BusyService {
     this.busyRequestCount++;
     this.spinner.show( undefined , 
       {
-        bdColor : 'rgba(0 , 0 , 0  , 0.4)'
+        bdColor : 'rgba(0 , 0 , 0  , 0.9)'
       }
     );
   }

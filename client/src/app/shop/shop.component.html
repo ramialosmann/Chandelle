@@ -1,6 +1,9 @@
 <div class="container mt-5 " data-bs-theme="light">
     <div class="row">
-        <section class="col-3 mt-5 bg- border border-dark border-2 rounded" style="height: fit-content;">
+        <section 
+          *ngIf="types.length > 0 && brands.length > 0"
+          class="col-3 mt-5 bg- border border-dark border-2 rounded" 
+          style="height: fit-content;">
             
             <h3 class="mt-2 text-black">Filters</h3>
         <h5 class="text-black mt-4 me-2 dropdown-toggle" (click)="isSortCollapsed = !isSortCollapsed">Sort </h5>  
@@ -38,7 +41,7 @@
             <div class="d-flex justify-content-between pb-2 mb-3 align-items-center">
                 <app-pagination-header [count]="count" 
                  [PageNumber]="queryParams.PageNumber" [PageSize]="queryParams.PageSize" ></app-pagination-header>
-                <form #SearchForm="ngForm"   class="d-flex" (ngSubmit)="SearchProduct()">
+                <form *ngIf="types.length > 0 && brands.length > 0" #SearchForm="ngForm"   class="d-flex" (ngSubmit)="SearchProduct()">
                     <input 
                     [typeahead]="names"
                     type="search"
@@ -54,7 +57,7 @@
             <div class="row row-cols-3 g-3">
                 <app-shop-product-card *ngFor="let product of products" [product]="product"></app-shop-product-card>
             </div>
-            <div class="text-dark ms-5 mt-4" *ngIf="count === 0">
+            <div class="text-dark ms-5 mt-4" *ngIf="count === 0 && types.length > 0 && brands.length > 0">
                 <h4 class="mt-5">No products were found</h4>
                 <button class="btn btn-outline-dark mt-3" 
                 (click)="ResetFilters() ">Reset Filters </button>

@@ -1,10 +1,24 @@
-<div class=" bg-secondary iconheader  text-center border rounded mt-1" >
-   <a href="{{instagramLink}}" target="_blank"> 
-    <i class="bi bi-instagram me-2"></i></a>
-   <a href="{{facebookLink}}" target="_blank">
-      <i class="bi bi-facebook me-2"></i></a>
-    <a href="tel:{{phonenumber}}"> <i class="bi bi-telephone"></i></a>
+
+
+
+<!--this is now hard coded , soon we will have a property in product entity ( isFeatured ) of type bool
+    if true , it will be in the place of the image with its name and description and a router link directly to
+    its detail page. 
+  -->    
+<div class="img-wrapper">
+<img src="../../assets//images/candle-home-page-2.jpg" alt="">
 </div>
+<div class="shop-now">
+    <h1>Candilia</h1>
+    <p class="sub">So Sweet, So pure, Just <strong>Phenomenal</strong> </p>
+    <div class="d-flex">
+        <a class="me-2  link" >Learn more</a>
+        <a class=" link" routerLink="/shop" >Shop now</a>
+    </div>
+</div>           
+        
+
+
 <div class="row mt-4 text-black">
     <section class="col-6"><h1>
         Chandelle : The art of candles</h1>
@@ -17,8 +31,12 @@
             Nemo eos sapiente voluptate autem neque dicta asperiores at itaque nobis, 
             eligendi ab, fugiat expedita.</p>
     </section>
-    <section class="col-4">
-        
-    </section>
 </div>
+<div class=" bg-secondary iconheader  text-center border rounded mt-1" >
+    <a href="{{instagramLink}}" target="_blank"> 
+     <i class="bi bi-instagram me-2"></i></a>
+    <a href="{{facebookLink}}" target="_blank">
+       <i class="bi bi-facebook me-2"></i></a>
+     <a href="tel:{{phonenumber}}"> <i class="bi bi-telephone"></i></a>
+ </div>
 

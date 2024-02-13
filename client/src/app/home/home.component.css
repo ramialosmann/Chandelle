@@ -9,3 +9,62 @@
     transition-duration: 0.5s;
     transition: ease-in-out;
 }
+
+.img-wrapper img {
+    height: 600px;
+    width: 120%;
+    margin-left: -80px;
+    display: block;
+    opacity: 1;
+    transition: all ease-in-out 0.6s;
+
+}
+
+.img-wrapper:hover img {
+    opacity: 0.9;
+    transition: all ease-in-out 0.6s;
+}
+
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+.shop-now {
+    color: black;
+    position: absolute;
+    top: 52%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.shop-now h1 {
+    font-size: 88px;
+    font-weight: bolder;
+}
+
+.shop-now .sub {
+    font-size: 24px;
+}
+
+.link {
+    color: blue;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all ease-in-out 0.5s;
+    text-decoration: none;
+}
+
+.link:hover {
+    opacity: 1.5;
+    text-decoration:underline;
+    transition: all ease-in-out 0.5s;
+}
+
+.img-wrapper-2 {
+   margin-top: -10px;
+}
+
+.img-wrapper-2 .shop-now {
+    color: white;
+}
