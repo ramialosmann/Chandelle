@@ -7,15 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { ProductCardComponent } from './home/product-card/product-card.component';
 import { FormsModule } from '@angular/forms';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
-import { RegisterComponent } from './register/register.component';
-import { SharedModule } from './_modules/shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { BreadcrumbModule } from 'xng-breadcrumb';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ServerErrorComponent } from './server-error/server-error.component';
+import { SharedModule } from './_modules/shared.module';
 
 
 
@@ -26,9 +26,9 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     AppComponent,
     NavComponent,
     HomeComponent,
-    ProductCardComponent,
-    RegisterComponent,
     HeaderComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
 
 
   ],

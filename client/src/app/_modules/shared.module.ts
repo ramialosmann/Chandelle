@@ -8,8 +8,8 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ToastrModule } from 'ngx-toastr';
-import { PaginationHeaderComponent } from './pagination-header/pagination-header.component';
-import { PageSwitcherComponent } from './page-switcher/page-switcher.component';
+import { PaginationHeaderComponent } from './Shared-Components/pagination-header/pagination-header.component';
+import { PageSwitcherComponent } from './Shared-Components/page-switcher/page-switcher.component';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { NgxSpinnerModule } from 'ngx-spinner';
 

@@ -1,0 +1,17 @@
+<div class="container text-black mt-3">
+    <h3>A Server error has occurred </h3>
+    <button class="btn btn-outline-dark" routerLink="/">Go to home page <i class="fa fa-home ms-2"></i></button>
+
+
+    <ng-container *ngIf="error">
+        <h4><Strong>Error : </Strong> {{ error.message }}</h4>
+
+        <h4>What to do next :</h4>
+        <ul>
+            <li>Try recreating the request in postman - if error persists then the problem is def from the API</li>
+        </ul>
+
+        <h5>Stack trace : </h5>
+        <code class="bg-secondary text-black>">{{error.details}}</code>
+    </ng-container>
+</div>

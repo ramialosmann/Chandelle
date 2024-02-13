@@ -4,7 +4,7 @@ import { Product } from '../_models/Product';
 import { ProductBrand } from '../_models/ProductBrand';
 import { ProductType } from '../_models/ProductType';
 import { ShopQueryApiParams } from '../_models/ShopQueryApiParams';
-import {  NgxSpinnerService } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-shop',
@@ -38,21 +38,13 @@ export class ShopComponent implements OnInit {
    queryParams = new ShopQueryApiParams();
 
   
-  constructor(private productService : ProductService, private spinner : NgxSpinnerService ) {
+  constructor(private productService : ProductService) {
 
   }
   ngOnInit(): void {
    this.GetProducts();
    this.GetBrands();
    this.GetTypes();
-   this.SetSpinner()
-  }
-  SetSpinner() {
-    this.spinner.show();
-
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 1000)
   }
   GetBrands() {
     this.productService.GetBrands().subscribe({
@@ -114,6 +106,7 @@ export class ShopComponent implements OnInit {
     this.GetProducts();
   }
 
+  //typeahead
   GetNames() {
     for(let product of this.products) {
         this.names.push(product.name);
