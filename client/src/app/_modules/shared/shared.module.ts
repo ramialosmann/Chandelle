@@ -10,6 +10,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ToastrModule } from 'ngx-toastr';
 import { PaginationHeaderComponent } from './pagination-header/pagination-header.component';
 import { PageSwitcherComponent } from './page-switcher/page-switcher.component';
+import { NgxSpinnerModule } from 'ngx-spinner/public_api';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { PageSwitcherComponent } from './page-switcher/page-switcher.component';
     AccordionModule,
     CollapseModule,
     PaginationHeaderComponent,
-    PageSwitcherComponent
+    PageSwitcherComponent,
   ]
 })
 export class SharedModule {

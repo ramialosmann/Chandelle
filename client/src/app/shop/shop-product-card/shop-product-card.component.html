@@ -1,13 +1,21 @@
-<div class="card  border-dark bg-secondary mb-3 text-center" style="max-width: 22rem; height:500px;  " *ngIf="product">
+<div class="card  border-dark bg-secondary mb-3 text-center" style="max-width: 22rem; height:400px;  " *ngIf="product">
     <div class="card-header" style="max-height: 65px ; overflow: hidden; text-indent: 0;">
          <h4 class="scrolling-text" style="width: max-content ;">{{product.name}}</h4></div>
-    <div class="card-body">
+    <div class="card-body image-body">
         <div class="card-image-wrapper" >
             <div class="overlay">
-                <a ><strong> <i class="bi bi-eye"></i> Quick view </strong></a>
+                <a ><strong class="text-black"> <i class="bi bi-eye"></i> Quick view </strong></a>
               </div>
             <img src="{{product.pictureUrl}}" alt="product" class=" bg-transparent" 
                 (click)="(quickviewModal(QucikViewTemplate))">
+                <div class="d-flex mb-2" style="margin-top: -50px;">
+                    <button class="btn btn-primary me-2 btn-sm cart-button" 
+                    style="width: 50%;" tooltip="add To cart" placement="top">
+                    <i class="bi bi-cart" style="font-size: 20px;"></i></button>           
+                    <button class="btn btn-dark btn-sm detail-button"  (click)="NavigateToProductDetail(product.id)"
+                    style="width: 50%;" tooltip="view Product" placement="top">
+                    <i class="bi bi-arrows-angle-expand" style="font-size: 20px;"></i></button>
+                </div>
             <ng-template #QucikViewTemplate >
                <app-quick-view [product]="product" (close)="closequickview($event)"  ></app-quick-view>
             </ng-template>
@@ -16,16 +24,6 @@
     </div>
 
     <div class="card-body">
-        <h2 class="text-black">{{product.price}} $</h2>
-    </div>
-    <div class="card-body">
-      <div class="d-flex mb-2" style="margin-top: -50px;">
-        <button class="btn btn-outline-dark me-2 btn-sm" 
-        style="width: 50%;" tooltip="add To cart" placement="bottom">
-        <i class="bi bi-cart" style="font-size: 20px;"></i></button>           
-        <button class="btn btn-outline-dark btn-sm" 
-        style="width: 50%;" tooltip="view Product" placement="bottom">
-        <i class="bi bi-arrows-angle-expand" style="font-size: 20px;"></i></button>
-    </div>
+        <h2 class="text-black">{{product.price | currency}} </h2>
     </div>
 

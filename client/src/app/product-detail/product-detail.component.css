@@ -1,0 +1,23 @@
+    .card-img-wrapper {
+    background-color: transparent;
+    position: absolute;
+    overflow: hidden;
+    max-width: 25rem;
+    height: 370px;
+    border-radius: 13px;
+    margin-right: 32px;
+}
+
+.card-img-wrapper img {
+    max-width: 100%;
+    transform: scale(1 , 1);
+    transition-duration: 1.5s;
+}
+.card-img-wrapper:hover img {
+    transform: scale(1.1 , 1.1); 
+    transition: all ease-in-out;
+    transition-duration: 1.5s;
+}
+.card {
+    border-radius: 27px;
+}

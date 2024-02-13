@@ -1,19 +1,24 @@
-<div class="container-fluid">
-<div class="row" *ngFor="let product of products , let i = index" style="margin-left:40px;">
-    <div class="col-12 mt-3" *ngIf="i < 2">
-       <div class="img-wrapper">
-        <img class="bigImg" src="{{product.pictureUrl}}">
-    </div>
+<div class=" bg-dark bg-gradient text-center border rounded mt-1" data-bs-theme="light">
+   <a href="{{instagramLink}}" target="_blank"> 
+    <i class="bi bi-instagram me-2"></i></a>
+   <a href="{{facebookLink}}" target="_blank">
+      <i class="bi bi-facebook me-2"></i></a>
+    <a href="tel:{{phonenumber}}"> <i class="bi bi-telephone"></i></a>
+</div>
+<div class="row mt-4 text-black">
+    <section class="col-6"><h1>
+        Chandelle : The art of candles</h1>
+        <p class="lead mt-2">We have the spark that starts the fire.</p>
+    </section>
+    <section class="col-6">
+        <h1>About us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Magnam amet quae aperiam voluptate obcaecati ipsum! 
+            Nemo eos sapiente voluptate autem neque dicta asperiores at itaque nobis, 
+            eligendi ab, fugiat expedita.</p>
+    </section>
+    <section class="col-4">
         
-    </div>
+    </section>
 </div>
-<div class="row">
-    
-        <div class="col-6 mb-4 " *ngFor="let product of products, let i = index" >
-            <div  *ngIf="i > 3 && i < 10" class="sub-img-wrapper me-1">
-             <img src="{{product.pictureUrl}}" alt="">
-            </div>
-        </div>
-    
-</div>
-</div>
+

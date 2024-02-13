@@ -18,3 +18,24 @@
 .body::-webkit-scrollbar {
   display: none;
 }
+
+
+.bg-secondary {
+    background-color: rgb(128, 128, 128 , 0.0) !important;
+    backdrop-filter: blur(7px);
+}
+
+.btn-primary {
+    background-color: rgb(108, 90, 172);
+    border-color: rgb(108, 90, 172);
+}
+.btn-primary:hover {
+    background-color: rgb(108, 90, 172 , 0.7);
+    border-color: rgb(108, 90, 172);
+}
+
+
+
+label.xng-breadcrumb-trail {
+    color: rgb(108, 90, 172);
+}

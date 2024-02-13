@@ -8,16 +8,15 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from './home/product-card/product-card.component';
-import { QuickViewComponent } from './home/product-card/quick-view/quick-view.component';
-
 import { FormsModule } from '@angular/forms';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
-
-import { ShopComponent } from './shop/shop.component';
-import { ShopProductCardComponent } from './shop/shop-product-card/shop-product-card.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from './_modules/shared/shared.module';
 import { HeaderComponent } from './header/header.component';
+import { RouterModule } from '@angular/router';
+import { BreadcrumbModule } from 'xng-breadcrumb';
+import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+
 
 
 
@@ -28,11 +27,9 @@ import { HeaderComponent } from './header/header.component';
     NavComponent,
     HomeComponent,
     ProductCardComponent,
-    QuickViewComponent,
-    ShopComponent,
-    ShopProductCardComponent,
     RegisterComponent,
     HeaderComponent,
+
 
   ],
   imports: [
@@ -41,11 +38,14 @@ import { HeaderComponent } from './header/header.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    BreadcrumbModule
 
   ],
   providers: [
-    {provide : HTTP_INTERCEPTORS , useClass:ErrorInterceptor , multi:true}
+    {provide : HTTP_INTERCEPTORS , useClass:ErrorInterceptor , multi:true},
+    {provide : HTTP_INTERCEPTORS , useClass:LoadingInterceptor , multi:true}
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,26 @@
+<div class="container mt-2" *ngIf="product">
+    <div class="row">
+        <section class="col-5">
+            <div class="card text-light bg-dark bg-gradient mb-3" style="max-width: 50rem; height: 430px;">
+               
+                <div class="card-body">
+                    <div class="card-img-wrapper">
+                  <img src="{{product.pictureUrl}}" alt="">
+                </div>
+                </div>
+              </div>
+        </section>                  
+        <section class="col-7 text-dark">
+            <h3 class="mt-4"><strong>{{product.name}}</strong></h3>
+            <h6>{{product.productType}}</h6>
+            <h6>{{product.price | currency}}</h6>
+            <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-dash-circle me-2" style="font-size: 1.5rem;"></i>
+                <i class="bi bi-plus-circle " style="font-size: 1.5rem;"></i>
+            </div>
+            <button class="btn btn-outline-dark   mb-2"><i class="bi bi-cart"></i> Add To Cart</button>
+            <h6><strong>Description : </strong></h6>
+            <p >{{product.description}}</p>
+        </section>
+    </div>
+</div>
