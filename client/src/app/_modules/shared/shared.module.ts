@@ -11,6 +11,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { PaginationHeaderComponent } from './pagination-header/pagination-header.component';
 import { PageSwitcherComponent } from './page-switcher/page-switcher.component';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     PaginationModule.forRoot(),
     AccordionModule.forRoot(),
     CollapseModule.forRoot(),
-    TypeaheadModule.forRoot()
+    TypeaheadModule.forRoot(),
+    NgxSpinnerModule.forRoot({type : 'fire'})
   ],
   exports : [
     ToastrModule,
@@ -42,7 +44,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     CollapseModule,
     PaginationHeaderComponent,
     PageSwitcherComponent,
-    TypeaheadModule
+    TypeaheadModule,
+    NgxSpinnerModule
   ]
 })
 export class SharedModule {

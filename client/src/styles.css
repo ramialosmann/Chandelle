@@ -19,6 +19,10 @@
   display: none;
 }
 
+.header-bg {
+    background-color: rgba(53, 53, 53, 0.053);
+    backdrop-filter: blur(7px);
+}
 
 .bg-secondary {
     background-color: rgb(128, 128, 128 , 0.0) !important;
@@ -27,7 +31,7 @@
 
 .btn-primary {
     background-color: rgb(108, 90, 172, 0.7);
-    border-color: rgb(108, 90, 172, 0.7);
+    border-color: rgb(108, 90, 172, 0.3 );
 }
 .btn-primary:hover {
     background-color: rgb(108, 90, 172);

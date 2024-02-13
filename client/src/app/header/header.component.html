@@ -1,23 +1,24 @@
 
 
 <ng-container *ngIf="$any(bcService.breadcrumbs$ | async) as breadcrumbs">
-  <nav *ngIf="breadcrumbs[breadcrumbs.length-1].label === 'app home'" class="navbar navbar-expand-lg bg-dark " style=" align-items: center;"  >
+  <nav *ngIf="breadcrumbs[breadcrumbs.length-1].label === 'app home'" 
+  class="navbar navbar-expand-lg header-bg " style=" align-items: center;"  >
 
     <div class="container">
       <a class="navbar-brand mb-1 ms-3" (click)="NavigateToHomePage()" >
-          <img src="https://localhost:5001/images/products/newLogo.png" alt="">
+          <img src="https://localhost:5001/images/products/logoChandelle.png" alt="Chandelle">
       </a>
     </div>
   
   </nav>
   <ng-container *ngIf="breadcrumbs[breadcrumbs.length-1].label !== 'app home'">
-    <section class="py-4 bg-dark">
+    <section class="py-4 header-bg text-black">
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div class="col-8">
+          <div class="col-7">
              <h2>{{breadcrumbs[breadcrumbs.length-1].label | titlecase  }}</h2>
           </div>
-          <div class="col-4">
+          <div class="col-5 mb-2 ">
             <xng-breadcrumb >
               <ng-container *xngBreadcrumbItem="let breadcrumb; let info = info" >
                       <i class="bi bi-house" *ngIf="info === 'home'"></i>

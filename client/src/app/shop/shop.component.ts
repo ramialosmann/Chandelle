@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../_services/product.service';
 import { Product } from '../_models/Product';
 import { ProductBrand } from '../_models/ProductBrand';
 import { ProductType } from '../_models/ProductType';
 import { ShopQueryApiParams } from '../_models/ShopQueryApiParams';
-import { NgForm } from '@angular/forms';
+import {  NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-shop',
@@ -38,13 +38,21 @@ export class ShopComponent implements OnInit {
    queryParams = new ShopQueryApiParams();
 
   
-  constructor(private productService : ProductService ) {
+  constructor(private productService : ProductService, private spinner : NgxSpinnerService ) {
 
   }
   ngOnInit(): void {
    this.GetProducts();
    this.GetBrands();
    this.GetTypes();
+   this.SetSpinner()
+  }
+  SetSpinner() {
+    this.spinner.show();
+
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1000)
   }
   GetBrands() {
     this.productService.GetBrands().subscribe({
